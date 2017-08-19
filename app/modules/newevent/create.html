@@ -1,0 +1,105 @@
+<div>
+	<h1>Book New Event</h1>
+	<form ng-submit="submit()">
+		
+		<div class="row">
+			<div class="col-md-3">
+				<label for="">Event Title</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon0"><i class="fa fa-user"></i></span>
+				  	<input type="text" class="form-control" name="title" ng-model="formData.event_title"  placeholder="Event Title" aria-describedby="basic-addon0">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<label for="">User name</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+				  	<input type="text" class="form-control" name="name" ng-model="formData.name" placeholder="Username" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<label for="">Date of event</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon2"><i class="fa fa-calendar"></i></span>
+				  	<input type="datetime-local" class="form-control" name="date_of_event" ng-model="formData.data_of_event"  aria-describedby="basic-addon2">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<label for="">Time of event</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon3"><i class="fa fa-clock-o"></i></span>
+				  	<input type="time" class="form-control"  aria-describedby="basic-addon3">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<label for="">Date of reminder</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon4"><i class="fa fa-calendar"></i></span>
+				  	<input type="datetime-local" class="form-control" name="date_of_reminder" ng-model="formData.data_of_reminder" aria-describedby="basic-addon4">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<label for="">Time of reminder</label>
+				<div class="input-group">
+				  	<span class="input-group-addon" id="basic-addon4"><i class="fa fa-calendar"></i></span>
+				  	<input type="time" class="form-control"  aria-describedby="basic-addon4">
+				</div>
+			</div>
+		</div>
+	 	<!-- <div class="row">
+	 		<div class="col-md-12">
+	 			<div class="pac-card" id="pac-card">
+				    <div>
+				        <div id="title">
+				            Search location
+				        </div>
+				        <div id="type-selector" class="pac-controls">
+				            <input type="radio" name="type" id="changetype-all" checked="checked">
+				            <label for="changetype-all">All</label>
+				            <input type="radio" name="type" id="changetype-establishment">
+				            <label for="changetype-establishment">Establishments</label>
+				            <input type="radio" name="type" id="changetype-address">
+				            <label for="changetype-address">Addresses</label>
+				            <input type="radio" name="type" id="changetype-geocode">
+				            <label for="changetype-geocode">Geocodes</label>
+				        </div>
+				        <div id="strict-bounds-selector" class="pac-controls">
+				            <input type="checkbox" id="use-strict-bounds" value="">
+				            <label for="use-strict-bounds">Strict Bounds</label>
+				        </div>
+				    </div>
+				    <div id="pac-container">
+				        <input id="pac-input" type="text" placeholder="Enter a location">
+				    </div>
+				</div>
+				<div id="map"></div>
+				<div id="infowindow-content">
+				    <img src="" width="16" height="16" id="place-icon">
+				    <span id="place-name"  class="title"></span><br>
+				    <span id="place-address"></span>
+				</div>
+	 		</div>
+	 	</div> -->
+	 	<br>
+	 	<div class="row">
+	 		<div class="col-md-12">
+	 			<label for="">Description</label>
+	 			<textarea name="" id="" placeholder="Description" ng-model="formData.location" cols="30" rows="10" class="form-control"></textarea>
+	 		</div>
+	 	</div>
+	 	<div class="row m-10">
+	 		
+	 		<!-- <div class="col-md-1 col-md-offset-11"">
+	 			<input type="submit" class="btn btn-success" value="Add event">
+	 		</div> -->
+	 		<div class="col-md-1 col-md-offset-11" ng-if="dataType == true">
+	 			<input type="submit" class="btn btn-success" value="Add event">
+	 		</div>
+	 		<div class="col-md-1 col-md-offset-11" ng-if="dataType == false">
+	 			<input type="submit" class="btn btn-success" value="Update event" >
+	 		</div>
+	 	</div>
+	</form>
+</div>

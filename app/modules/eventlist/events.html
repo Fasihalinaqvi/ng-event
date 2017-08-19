@@ -1,0 +1,58 @@
+<div>
+	<h1>All Events</h1>
+
+<!--panel-->
+<div class="panel panel-default " ng-repeat="data in user">
+	<div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
+		<h3 class="panel-title">
+		{{data.event_title}}
+		</h3>
+	</div>
+	<div id="collapse1" class="collapse in">
+		<div class="panel-body">
+			<blockquote>
+				<table class="table table table-hover m-0">
+                    <tbody>
+                        <tr>
+                            <td><i class="fa fa-user" style="color:blue;"></i>&nbsp;&nbsp; Name:</td>
+                            <td id="">{{data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-calendar-check-o" style="color: #F05050;"></i>&nbsp;&nbsp;&nbsp;&nbsp; Date of event:</td>
+                            <td id="">{{data.date_of_event}}</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-hourglass-half" style="color: #EDC9AF;"></i>&nbsp;&nbsp;&nbsp; Time of event:</td>
+                            <td id="">{{data.time_of_event}}</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-calendar-check-o" style="color: green"></i>&nbsp;&nbsp;&nbsp; Date of reminder:</td>
+                            <td id="created">{{data.date_of_reminder}}</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-clock-o" style="color: green"></i>&nbsp;&nbsp;&nbsp; Time of reminder:</td>
+                            <td id="created">{{data.time_of_reminder}}</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+                <h3>Description</h3>
+               	<p>
+               		{{data.location}}
+               	</p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="button" class="btn btn-success" ng-click="updateEvent(data.id)" value="Update">
+                    </div>
+                    <div class="col-md-2 col-md-offset-4">
+                        <input type="button" class="btn btn-danger" ng-click="removeEvent(data.id)" value="Delete">
+                    </div>
+                </div>
+			</blockquote>
+			
+		</div>
+	</div>
+</div><!--/panel-->	
+ 	
+</div>
